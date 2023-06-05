@@ -1,2 +1,0 @@
-# danieljorgesantos.github.io
-portfolio
