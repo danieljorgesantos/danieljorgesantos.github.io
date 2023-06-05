@@ -1,0 +1,722 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans";
+    text-align: left;
+}
+
+[role=button] {
+    cursor: pointer
+}
+
+.container {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+.container-square {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    color: black;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    color: black;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.625rem;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+h4 {
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    color: black;
+    line-height: 1.625rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: black;
+    line-height: 1.625rem;
+    margin-bottom: 0.5rem;
+}
+
+
+h6 {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    color: black;
+}
+
+p {
+    font-size: 1rem;
+    color: grey;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.white {
+    color: #fff;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+form {
+    margin-bottom: 2.5rem;
+}
+
+input {
+    display: block;
+    width: calc(100% - 2rem);
+    padding: 0.9rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #4e5d78;
+    background-color: #f9fafb;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+input:focus {
+    outline: 1px solid #c4ddff;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+    cursor: pointer;
+}
+
+button {
+    font-weight: 600;
+    line-height: 1;
+    border-radius: 0.2rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    padding: 0.5rem 1.7rem;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    min-width: 10rem;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: blue;
+    border-color: blue;
+}
+
+@media (max-width: 768px) {
+    button {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: blue;
+    border-color: blue;
+}
+
+.ripple-btn-primary {
+    position: relative;
+    overflow: hidden;
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.ripple-btn-primary::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.ripple-btn-primary:focus::after,
+.ripple-btn-primary:active::after {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 1;
+}
+
+.btn-secondary {
+    color: grey;
+    background-color: #f5f6f8;
+    border-color: #f5f6f8;
+}
+
+.ripple-btn-secondary {
+    position: relative;
+    overflow: hidden;
+    background-color: grey;
+    border: none;
+    cursor: pointer;
+}
+
+.ripple-btn-secondary::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.ripple-btn-secondary:focus::after,
+.ripple-btn-secondary:active::after {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 1;
+}
+
+
+.btn-outline-primary {
+    color: blue;
+    border-color: blue;
+    background: transparent;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-row {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .form-row {
+        width: 47%;
+    }
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1rem;
+    padding: 1.25rem;
+}
+
+.card-type-outline {
+    background-color: #fff;
+    border: 1px solid grey;
+}
+
+.card-type-nx-grey {
+    background-color: #f8fafc;
+    border: 1px solid rgb(226, 228, 231, 0.125);
+}
+
+.card-type-nx-red {
+    background-color: #A52A2A;
+    border: 1px solid rgb(171, 2, 2);
+}
+
+.card-type-nx-green {
+    background-color: #17B169;
+    border: 1px solid rgb(226, 228, 231, 0.125);
+}
+
+.fx-container {
+    display: flex;
+}
+
+.fx-align-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.breadcrumbs {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.full-width-image {
+    width: 100%;
+    height: 0;
+    padding-bottom: 35%;
+    /* Set a desired aspect ratio */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.full-width-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.25rem;
+}
+
+.full-width-image-column {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    /* Set a desired aspect ratio */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border-radius: 0.25rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-links li {
+    margin-right: 2rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-links a:hover {
+    color: #555;
+}
+
+input[type="checkbox"]:checked~.navbar-menu {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navbar-menu {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin-right: 1.5rem;
+    }
+
+    .navbar-toggle-label {
+        display: none;
+    }
+}
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.scroll-container .content {
+    width: calc(100% - 10px);
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.scroll-container .content::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+.scroll-container .content::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 5px;
+}
+
+.scroll-container .content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.scroll-container .content::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scroll-container .content::-webkit-scrollbar-track:hover {
+    background-color: #f5f5f5;
+}
+
+.w-6 {
+    width: 1.5rem;
+}
+
+.h-6 {
+    height: 1.5rem;
+}
+
+.float-right {
+    float: right;
+}
+
+
+
+.text-center {
+    text-align: center;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid transparent;
+    -webkit-text-fill-color: #4e5d78;
+    -webkit-box-shadow: 0 0 0px 1000px #f9fafb inset;
+
+    display: block;
+    width: calc(100% - 2rem);
+    padding: 0.9rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.33;
+    color: #4e5d78;
+    background-color: #f9fafb;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+td,
+th {
+    border: 0px solid #dddddd;
+    text-align: left;
+    padding: 0.2rem;
+    padding-top:1.5rem;
+}
+
+.company-logo {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+    background: blue;
+    filter: sepia(100%) hue-rotate(190deg) saturate(900%);
+    background: url('https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/logo-and-brand/02-nvidia-logo-color-grn-500x200-4c25-p@2x.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.company-logo-2 {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+    background: blue;
+    filter: sepia(100%) hue-rotate(190deg) saturate(900%);
+    background: url('https://coursera-university-assets.s3.amazonaws.com/cc/61dbdf2c1c475d82d3b8bf8eee1bda/MSFT-stacked-logo_FINAL.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.company-logo-3 {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+    background: blue;
+    filter: sepia(100%) hue-rotate(190deg) saturate(900%);
+    background: url('https://logodix.com/logo/250079.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.top-name {
+    font-weight: 600;
+}
+
+.bottom-name {
+    color: rgb(107 114 128);
+}
+
+.text-left {
+    text-align: left;
+}
+
+.image-card-bk {
+    width: 20rem;
+    height: 12.3rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    border-radius: 0.375rem;
+}
+
+.bk-light-1 {
+    background-color: #f8f9fd;
+
+}
+
+.bk-light-2 {
+    background-color: #f2f3f0;
+}
+
+.bk-light-3 {
+    background-color: #fffdff;
+}
+
+.bk-medium-1 {
+    background-color: #66A3F2;
+}
+
+.bk-medium-2 {
+    background-color: #04ADBF;
+}
+
+.bk-medium-3 {
+    background-color: #F2CF1D;
+}
