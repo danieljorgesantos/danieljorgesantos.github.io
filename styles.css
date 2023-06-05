@@ -258,7 +258,7 @@ button:not(:disabled),
     cursor: pointer;
 }
 
-button {
+button, a {
     font-weight: 600;
     line-height: 1;
     border-radius: 0.2rem;
@@ -274,6 +274,10 @@ button {
     cursor: pointer;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
     min-width: 10rem;
+}
+
+a {
+    text-decoration: none;
 }
 
 .btn-primary {
